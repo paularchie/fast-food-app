@@ -1,0 +1,23 @@
+.schedule-container {
+    width: 500px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .schedule-header, .schedule-item {
+        display: flex;
+
+        & > * {
+            width: 25%;
+            text-align: center;
+        }
+
+        margin: 0.2em 0;
+    }
+
+    .schedule-header  > * {
+        font-weight: 700;
+    }
+}
