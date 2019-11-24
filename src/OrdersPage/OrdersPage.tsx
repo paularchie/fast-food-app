@@ -10,7 +10,7 @@ enum Tasks {
 
 const TaskDurationMap = {
     [Tasks.MakeSandwich]: 60,
-    [Tasks.ServeSandwich]: 30
+    [Tasks.ServeSandwich]: 20
 }
 
 
