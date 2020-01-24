@@ -6,6 +6,7 @@
     "test": "jest",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "cy:install": "cypress install",
     "start": "webpack-dev-server --mode development --hot --open --port 3000",
     "build": "webpack --mode production"
   },
