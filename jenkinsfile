@@ -6,12 +6,6 @@ pipeline {
         }
     }
     stages {
-        stage('git checkout') {
-            steps {
-                echo 'Checking out from github repo'
-                git 'https://github.com/paularchie/fast-food-app.git'
-            }
-        }
         stage('Build') { 
             steps {
                 sh 'npm install' 
