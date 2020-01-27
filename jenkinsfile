@@ -1,0 +1,32 @@
+pipeline {
+    agent {
+        docker {
+            image 'cypress/base' 
+            args '-p 3000:3000' 
+        }
+    }
+    stages {
+        stage('git checkout') {
+            steps {
+                echo 'Checking out from github repo'
+                git 'https://github.com/paularchie/fast-food-app.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+                sh 'npm run cy:install'
+            }
+        }
+        stage('Test - Jest') { 
+            steps {
+                sh 'npm run test' 
+            }
+        }
+        stage('Test - Cypress') { 
+            steps {
+                sh 'npm run cy:run'
+            }
+        }
+    }
+}
