@@ -2,7 +2,9 @@
 
 context('Actions', () => {
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/commands/actions')
+    const url = Cypress.env('url');
+    cy.log(url);
+    cy.visit(url)
   })
 
   // https://on.cypress.io/interacting-with-elements
