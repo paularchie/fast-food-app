@@ -2,8 +2,10 @@
 
 context('Actions', () => {
   beforeEach(() => {
+    cy.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     const url = Cypress.env('url');
-    cy.log(url);
+    cy.log('The url is', url);
+    console.log(cy.log('The url is', url))
     cy.visit(url)
   })
 
