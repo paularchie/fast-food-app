@@ -4,10 +4,10 @@
   "description": "",
   "scripts": {
     "test": "jest",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run --env url=$URL",
+    "cy:open": "cypress open --env url=$URL",
+    "cy:headless": "cypress run --env url=$URL",
     "cy:install": "cypress install",
-    "start": "webpack-dev-server --mode development --hot --open --port 3000",
+    "start": "webpack-dev-server --mode development --hot --port 5000",
     "build": "webpack --mode production"
   },
   "dependencies": {
